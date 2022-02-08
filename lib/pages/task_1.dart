@@ -147,7 +147,7 @@ class _Task1PageState extends State<Task1Page> {
                     if(passwordController.text.isEmpty||emailController.text.isEmpty){
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Fields are not fully filled")));
                     }
-                    else if(account.password==passwordController.text){
+                    else if(account.password==passwordController.text && account.email==emailController.text){
                       _doLogin();
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Your password or email is incorrect")));
